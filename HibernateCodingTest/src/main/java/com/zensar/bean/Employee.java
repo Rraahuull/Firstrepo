@@ -33,15 +33,11 @@ public class Employee {
 	Address address;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinTable(name="employee_bankAccount",
-	joinColumns = @JoinColumn(name="empId",referencedColumnName = "empId"),
-	inverseJoinColumns = @JoinColumn(name="bankId",referencedColumnName = "bankId",unique = true))
+	@JoinTable(name="employee_bankAccount")
 	BankAccount account;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinTable(name="employee_skillLevel",
-	joinColumns = @JoinColumn(name="empId",referencedColumnName = "empId"),
-	inverseJoinColumns = @JoinColumn(name="skillLevel",referencedColumnName = "skillLevel",unique = true))
+	@JoinTable(name="employee_skillLevel")
 	
 	List<Skill> skillList;
 	
