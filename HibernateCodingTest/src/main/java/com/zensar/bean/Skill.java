@@ -2,6 +2,7 @@ package com.zensar.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Entity
