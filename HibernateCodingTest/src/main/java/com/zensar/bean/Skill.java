@@ -4,7 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Id;
 
 
-
+@Entity
+@Table(name="skill")
 public class Skill {
 	@Id
 	int skillLevel;
