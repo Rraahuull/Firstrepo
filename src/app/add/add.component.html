@@ -1,0 +1,32 @@
+<p>add works!</p>
+<form #LoanForm="ngForm">
+    {{loanForm.value |  json}}<br>
+    {{loan | json}}
+        <table >
+        <tr>
+            <td><label>LOANID</label></td>
+            <td><input type="number" [(ngModel)]="loan.loanId" name="txtLoanId"></td>
+        </tr>
+        <tr>
+            <td><label>CUSTOMERNAME</label></td>
+            <td><input type="text" [(ngModel)]="loan.loanCustomerNAme" name="txtName"></td>
+        </tr>
+        <tr>
+            <td><label>AMOUNT</label></td>
+            <td><input type="number" [(ngModel)]="laon.loanAmount" name="txtAmount"></td>
+        </tr>
+        <tr>
+            <td><label>RATEOFINTEREST</label></td>
+            <td><input type="number" [(ngModel)]="loan.rateOfInterest" name="txtInterest"></td>
+        </tr>
+        <tr>
+            <td><label>TENURE</label></td>
+            <td><input type="text" [(ngModel)]="loan.tenure" name="txtTenure"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="add()">ADD</button>
+            </td>
+        </tr>
+    </table>
+</form>
